@@ -58,10 +58,10 @@ employee-management-dashboard/
 ├── public/
 ├── src/
 │   ├── components/
-│   │   ├── DashboardHeader.jsx
-│   │   ├── DashboardHeader.css
-│   │   ├── DashboardStats.jsx
-│   │   ├── DashboardStats.css
+│   │   ├── Header.jsx
+│   │   ├── Header.css
+│   │   ├── DashboardStatus.jsx
+│   │   ├── DashboardStatus.css
 │   │   ├── DeleteConfirmModal.jsx
 │   │   ├── DeleteConfirmModal.css
 │   │   ├── EmployeeForm.jsx

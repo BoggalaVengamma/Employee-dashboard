@@ -50,7 +50,7 @@ const DashboardStatus = ({ employees }) => {
       {stats.map((stat, index) => (
         <div 
           key={stat.id} 
-          className={`stat-card stat-${stat.color} animate-fade-in`}
+          className={`stat-card stat-${stat.color}`}
           style={{ animationDelay: `${index * 0.1}s` }}
         >
           <div className="stat-icon">

@@ -12,7 +12,7 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
   const [emailError, setEmailError] = useState("");
-
+  const [passwordError, setPasswordError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,6 +43,13 @@ const Login = () => {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setEmailError("Please enter a valid email address");
     } else {
+      setEmailError("");
+    }
+  };
+  const validatePassoword = () => {
+    if (!email) {
+      setPasswordError("password is required");
+    }  else {
       setEmailError("");
     }
   };
@@ -98,10 +105,14 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
+                  onBlur={validatePassoword}
                   disabled={isLoading}
                   autoComplete="current-password"
                 />
               </div>
+              {passwordError && (
+                <p className="error-text">{passwordError}</p>
+              )}
             </div>
 
             <button 
